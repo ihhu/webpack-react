@@ -1,11 +1,11 @@
 # webpack-template
 
-»ùÓÚ`webpack4+ babel7+`´î½¨µÄÇ°¶Ë´ò°üÅäÖÃ»·¾³
+åŸºäº`webpack4+ babel7+`æ­å»ºçš„å‰ç«¯æ‰“åŒ…é…ç½®ç¯å¢ƒ
 
 --- 
 
 
-## ¹¹½¨ÃüÁî
+## æ„å»ºå‘½ä»¤
 
 ```javascript
 npm install 
@@ -15,32 +15,32 @@ npm run build
 
 ---
 
-## `webpack`¹Ù·½ÍøÖ·
-[Ó¢ÎÄ](https://webpack.js.org/) `https://webpack.js.org`
+## `webpack`å®˜æ–¹ç½‘å€
+[è‹±æ–‡](https://webpack.js.org/) `https://webpack.js.org`
 
-[ÖĞÎÄ](https://webpack.docschina.org/) `https://webpack.docschina.org`
+[ä¸­æ–‡](https://webpack.docschina.org/) `https://webpack.docschina.org`
 
 ---
-## ´ÓÁã¿ªÊ¼ÅäÖÃ`webapck`´ò°ü»·¾³
+## ä»é›¶å¼€å§‹é…ç½®`webapck`æ‰“åŒ…ç¯å¢ƒ
 
-### ÉèÖÃ´ò°üÄ¿±êä¯ÀÀÆ÷
-- ´´½¨`.browserslistrc`ÎÄ¼ş
-- ±à¼­`.browserslistrc`ÎÄ¼ş
+### è®¾ç½®æ‰“åŒ…ç›®æ ‡æµè§ˆå™¨
+- åˆ›å»º`.browserslistrc`æ–‡ä»¶
+- ç¼–è¾‘`.browserslistrc`æ–‡ä»¶
 
 ```
 last 2 versions
 > 2%
 ```
 
-### `.js`ÎÄ¼ş´ò°üÅäÖÃ
+### `.js`æ–‡ä»¶æ‰“åŒ…é…ç½®
 
-- °²×°`@babel/core @babel/preset-ent @babel-transfrom-runtime @babel-loader core-js @babel/runtime @babel/plugin-proposal-class-properties`ÒÀÀµ°ü
+- å®‰è£…`@babel/core @babel/preset-ent @babel-transfrom-runtime @babel-loader core-js @babel/runtime @babel/plugin-proposal-class-properties`ä¾èµ–åŒ…
 ```
 npm i -D @babel/core @babel/preset-ent @babel-transfrom-runtime @babel-loader core-js @babel/plugin-proposal-class-properties
 npm i -S @babel/runtime
 ```
 
-- ´´½¨`.babelrc`²¢±à¼­`.babelrc`ÎÄ¼ş
+- åˆ›å»º`.babelrc`å¹¶ç¼–è¾‘`.babelrc`æ–‡ä»¶
 ```
 {
     "presets":[
@@ -58,7 +58,7 @@ npm i -S @babel/runtime
 }
 ```
 
-- `build/base.js`ÎÄ¼ş Ìí¼Ó`js`´ò°üÅäÖÃ
+- `build/base.js`æ–‡ä»¶ æ·»åŠ `js`æ‰“åŒ…é…ç½®
 ```
     module:{
         rules:[
@@ -74,23 +74,23 @@ npm i -S @babel/runtime
     },
 ```
 
-### `.css|.scss`ÎÄ¼ş´ò°üÅäÖÃ
+### `.css|.scss`æ–‡ä»¶æ‰“åŒ…é…ç½®
 
-- °²×°`css-loader style-loader postcss-loader cssnano node-sass sass-loader autoprefixer css-url-relative-plugin mini-css-extract-plugin`ÒÀÀµ°ü
+- å®‰è£…`css-loader style-loader postcss-loader cssnano node-sass sass-loader autoprefixer css-url-relative-plugin mini-css-extract-plugin`ä¾èµ–åŒ…
 ```
 npm i -D css-loader style-loader postcss-loader cssnano node-sass sass-loader autoprefixer css-url-relative-plugin mini-css-extract-plugin
 ```
-`node-sass`°²×°²»³É¹¦Ê± ´´½¨ `.npmrc`ÎÄ¼ş²¢±à¼­
+`node-sass`å®‰è£…ä¸æˆåŠŸæ—¶ åˆ›å»º `.npmrc`æ–‡ä»¶å¹¶ç¼–è¾‘
 ```
 sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
 registry=https://registry.npm.taobao.org
 ```
-È»ºóÖØĞÂ°²×°`node-sass sass-loader`
+ç„¶åé‡æ–°å®‰è£…`node-sass sass-loader`
 ```
 npm i -D node-sass sass-loader
 ```
 
-- ´´½¨`postcss.config.js`²¢±à¼­`postcss.config.js`ÎÄ¼ş
+- åˆ›å»º`postcss.config.js`å¹¶ç¼–è¾‘`postcss.config.js`æ–‡ä»¶
 ```
 module.exports={
     plugins:{
@@ -100,7 +100,7 @@ module.exports={
 }
 ```
 
-- `build/dev.js`ÎÄ¼ş Ìí¼Ó¿ª·¢»·¾³ `.css|.scss`ÎÄ¼ş´ò°üÅäÖÃ
+- `build/dev.js`æ–‡ä»¶ æ·»åŠ å¼€å‘ç¯å¢ƒ `.css|.scss`æ–‡ä»¶æ‰“åŒ…é…ç½®
 ```
     module:{
         rules:[
@@ -140,7 +140,7 @@ module.exports={
     },
 ```
 
-- `build/prod.js`ÎÄ¼ş Ìí¼ÓÉú²ú»·¾³ `css|scss`´ò°üÅäÖÃ
+- `build/prod.js`æ–‡ä»¶ æ·»åŠ ç”Ÿäº§ç¯å¢ƒ `css|scss`æ‰“åŒ…é…ç½®
 ```
 const MiniCssExtractPlugin=require("mini-css-extract-plugin");
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
@@ -179,12 +179,12 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin');
     ]
 ```
 
-### Í¼Æ¬¼°×ÖÌåÎÄ¼ş´ò°üÅäÖÃ
-- °²×°`file-loader url-loader`ÒÀÀµ°ü
+### å›¾ç‰‡åŠå­—ä½“æ–‡ä»¶æ‰“åŒ…é…ç½®
+- å®‰è£…`file-loader url-loader`ä¾èµ–åŒ…
 ```
 npm i -D file-loader url-loader
 ```
-- ĞŞ¸Ä`build/dev.js`ÎÄ¼ş Ìí¼Ó¿ª·¢»·¾³Í¼Æ¬¼°×ÖÌåÎÄ¼şÅäÖÃ
+- ä¿®æ”¹`build/dev.js`æ–‡ä»¶ æ·»åŠ å¼€å‘ç¯å¢ƒå›¾ç‰‡åŠå­—ä½“æ–‡ä»¶é…ç½®
 ```
     module:{
         rules:[
@@ -215,7 +215,7 @@ npm i -D file-loader url-loader
         ]
     },
 ```
-- ĞŞ¸Ä`build/prod.js`ÎÄ¼ş Ìí¼ÓÉú²ú»·¾³Í¼Æ¬¼°×ÖÌåÎÄ¼şÅäÖÃ
+- ä¿®æ”¹`build/prod.js`æ–‡ä»¶ æ·»åŠ ç”Ÿäº§ç¯å¢ƒå›¾ç‰‡åŠå­—ä½“æ–‡ä»¶é…ç½®
 ```
     module:{
         rules:[
