@@ -1,5 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import {HashRouter} from "react-router-dom";
 
 import App from "@/app.js";
 
@@ -10,7 +11,7 @@ console.log("IS_MOCK:::",IS_MOCK)
 console.log("app start 1");
 console.log("app",App);
 
-render(<App/>,document.querySelector("#app"));
+render(<HashRouter><App/></HashRouter>,document.querySelector("#app"));
 
 var oApp=document.querySelector("#app")
 var oImg=require("@/Style/Images/13.jpg");
