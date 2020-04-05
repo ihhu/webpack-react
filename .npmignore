@@ -4,3 +4,4 @@ node_modules
 *.project
 dist/
 .git
+.linaria-cache

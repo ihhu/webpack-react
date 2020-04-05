@@ -74,7 +74,20 @@ const baseConf={
             {
                 test:/\.js$/,
                 exclude:[/node_modules/],
-                loader:"babel-loader"
+                use:[
+                    {
+                        loader:"babel-loader",
+                        options:{
+                            sourceMaps:process.env.NODE_ENV !== 'production',
+                        }
+                    },
+                    {
+                        loader:"linaria/loader",
+                        options:{
+                            "sourceMap":process.env.NODE_ENV !== 'production',
+                        }
+                    }
+                ]
             },
             {
                 test:/\.html$/,

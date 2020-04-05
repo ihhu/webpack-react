@@ -1,17 +1,16 @@
+
 import React from "react";
 import {render} from "react-dom";
-import {HashRouter} from "react-router-dom";
-
-import App from "@/app.js";
-
 import "@Style/Scss/Style.scss";
+
+import App from "@/App.js";
 console.log("env:::",env)
 console.log("IS_DEV:::",IS_DEV)
 console.log("IS_MOCK:::",IS_MOCK)
 console.log("app start 1");
 console.log("app",App);
 
-render(<HashRouter><App/></HashRouter>,document.querySelector("#app"));
+render(<App/>,document.querySelector("#app"));
 
 var oApp=document.querySelector("#app")
 var oImg=require("@/Style/Images/13.jpg");

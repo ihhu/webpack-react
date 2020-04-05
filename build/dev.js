@@ -79,9 +79,9 @@ function webpackConfig(env){
             ...devServer
         },
         plugins:[
-            // new webpack.HotModuleReplacementPlugin({
-            //     multiStep: true,
-            // }),
+            new webpack.HotModuleReplacementPlugin({
+                multiStep: true,
+            }),
             new webpack.DefinePlugin({
                 IS_DEV: JSON.stringify(true),
                 IS_MOCK:env.mock
