@@ -4,8 +4,11 @@ import {css} from "linaria";
 
 
 import Common from "@Components/Common.js";
+import Hooks from "@Views/Hooks.js";
 const A = lazy(()=>import(/* webpackChunkName:"views" */"@Views/A.js"));
 const B = lazy(()=>import(/* webpackChunkName:"views" */"@Views/B.js"));
+
+
 
 let h1 = css`font-size:50px;color:red;display:flex;transform:translate(20%);`
 let img = css`width:500px;margin-bottom: 10px;
@@ -41,6 +44,7 @@ class App extends Component{
                 <NavLink to="/" exact>根路由</NavLink>
                 <NavLink to="/a">a路由</NavLink>
                 <NavLink to="/b">b路由</NavLink>
+                <NavLink to="/hooks">hooks</NavLink>
                 <hr/>
                 <hr/>
                 <hr/>
@@ -52,6 +56,7 @@ class App extends Component{
                         </Route>
                         <Route path="/a"><A/></Route>
                         <Route path="/b" component={B}/>
+                        <Route path="/hooks"><Hooks/></Route>
                     </Switch>
                 </Suspense>
                 <hr/><hr/><hr/>
