@@ -83,8 +83,7 @@ function webpackConfig(env){
                 multiStep: true,
             }),
             new webpack.DefinePlugin({
-                IS_DEV: JSON.stringify(true),
-                IS_MOCK:env.mock
+                IS_DEV: JSON.stringify(true)
             })
         ]
     };
