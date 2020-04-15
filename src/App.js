@@ -2,9 +2,9 @@ import React,{Component,lazy,Suspense} from "react";
 import {HashRouter,Switch,Route,NavLink} from "react-router-dom";
 import {css} from "linaria";
 
-
 import Common from "@Components/Common.js";
 import Hooks from "@Views/Hooks.js";
+import Global from "@Views/Global.js";
 const A = lazy(()=>import(/* webpackChunkName:"views" */"@Views/A.js"));
 const B = lazy(()=>import(/* webpackChunkName:"views" */"@Views/B.js"));
 
@@ -45,6 +45,7 @@ class App extends Component{
                 <NavLink to="/a">a路由</NavLink>
                 <NavLink to="/b">b路由</NavLink>
                 <NavLink to="/hooks">hooks</NavLink>
+                <NavLink to ="/global">Global</NavLink>
                 <hr/>
                 <hr/>
                 <hr/>
@@ -57,6 +58,7 @@ class App extends Component{
                         <Route path="/a"><A/></Route>
                         <Route path="/b" component={B}/>
                         <Route path="/hooks"><Hooks/></Route>
+                        <Route path = "/global" component = {Global}/>
                     </Switch>
                 </Suspense>
                 <hr/><hr/><hr/>
