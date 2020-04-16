@@ -15,7 +15,7 @@ const PATHS={
 const pages = {
     main:{
         // page 的入口
-        entry:`${PATHS.entry}main.js`,
+        entry:`${PATHS.entry}Pages/Main/index.js`,
         // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
         title:"主页",
         // 在 dist/index.html 的输出
@@ -24,6 +24,12 @@ const pages = {
         template:`${PATHS.views}Index.ejs`
         // 提取出来的通用 chunk 和 vendor chunk。
         // chunks:[]
+    },
+    chart:{
+        entry:`${PATHS.entry}Pages/Chart/index.js`,
+        title:"图表",
+        filename:"chart.html",
+        template:`${PATHS.views}Index.ejs`
     }
 }
 
@@ -52,10 +58,10 @@ const config = {
             "@Views": "@/Views",
             "@Components": "@/Components",
             "@Router": "@/Router",
-            'vue':"vue/dist/vue.esm.js",
+            "vue":"vue/dist/vue.esm.js",
         },
         modules: [
-            PATHS.entry,PATHS.node_modules
+            PATHS.entry,"node_modules"
         ]
     },
     pages,

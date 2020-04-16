@@ -127,9 +127,6 @@ const baseConf={
     },
     plugins:[
         ...HTMLPlugins,
-        // new webpack.HotModuleReplacementPlugin({
-        //     multiStep: true,
-        // }),
         new webpack.HashedModuleIdsPlugin(),     //hash id 缓存
         new webpack.DefinePlugin({
             env: JSON.stringify(process.env)
