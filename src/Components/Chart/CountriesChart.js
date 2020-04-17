@@ -17,7 +17,7 @@ function CountriesChart({ data, dataKey }){
             style={{margin:"auto"}}
             margin={{top:30,left:20,right:30}}
             data={data}>
-            <GartesianGrid strokeDasharray="3 3"/>
+            <CartesianGrid strokeDasharray="3 3"/>
             <XAxis dataKey="country"/>
             <YAxis/>
             <Tooltip/>

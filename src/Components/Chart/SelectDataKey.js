@@ -5,11 +5,11 @@ export default function SelectDataKey({onChange}) {
         <>
           <label hrelFor="key-select">Select a key for sorting：</label>  
           <select name="" onChange={onChange} id="key-select">
-              <options value="cases">Cases</options>
-              <options value="todayCases">Today Cases</options>
-              <options value="deaths">Death</options>
-              <options value="recovered">Recovered</options>
-              <options value="active">Active</options>
+              <option value="cases">Cases</option>
+              <option value="todayCases">Today Cases</option>
+              <option value="deaths">Death</option>
+              <option value="recovered">Recovered</option>
+              <option value="active">Active</option>
           </select>
         </>
     )

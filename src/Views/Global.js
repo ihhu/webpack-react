@@ -5,7 +5,7 @@ import logo from "@Style/Images/logo.svg";
 import GlobalStats from "@Components/GlobalStats.js";
 
 
-const BASE_URL = "https://corona.lmao.ninja";
+const BASE_URL = "https://corona.lmao.ninja/v2";
 
 const GlobalApp = styled.div`width:100%;margin:auto;text-align:center;
     table,th,td {border: 1px solid #ccc;border-collapse: collapse;}
