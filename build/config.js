@@ -9,7 +9,7 @@ const PATHS={
     out_dll:"dll/",
     out_css:"Style/Css/",
     views:`${BASE_PATH}/public/pages/`,
-    "node_modules":`${BASE_PATH}/node_modules/`
+    "node_modules":`node_modules`
 }
 
 const pages = {
@@ -29,6 +29,12 @@ const pages = {
         entry:`${PATHS.entry}Pages/Chart/index.js`,
         title:"图表",
         filename:"chart.html",
+        template:`${PATHS.views}Index.ejs`
+    },
+    store:{
+        entry:`${PATHS.entry}Pages/Store/index.js`,
+        title:"ReduxStore",
+        filename:"store.html",
         template:`${PATHS.views}Index.ejs`
     }
 }
@@ -61,7 +67,7 @@ const config = {
             "vue":"vue/dist/vue.esm.js",
         },
         modules: [
-            PATHS.entry,"node_modules"
+            PATHS.entry,PATHS.node_modules
         ]
     },
     pages,
