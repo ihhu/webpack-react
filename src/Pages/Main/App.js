@@ -17,7 +17,7 @@ let bgImg = css`width:500px;min-height:275px;background:url(~@Style/Images/12.jp
 
 class App extends Component{
     state={
-        text:212323213,
+        text:"fds31321321321312f",
 
     }
     constructor(){

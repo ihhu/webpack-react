@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const webpackMerge=require("webpack-merge");
+const {merge}=require("webpack-merge");
 const { PATHS, devServer } = require("./config.js");
 function webpackConfig(env){
     const baseConf=require("./base");
@@ -79,16 +79,16 @@ function webpackConfig(env){
             ...devServer
         },
         plugins:[
-            new webpack.HotModuleReplacementPlugin({
-                multiStep: true,
-            }),
+            // new webpack.HotModuleReplacementPlugin({
+            //     multiStep: true,
+            // }),
             new webpack.DefinePlugin({
                 IS_DEV: JSON.stringify(true)
             })
         ]
     };
-    return webpackMerge(baseConf,devConf)
+    return merge(baseConf,devConf)
 }
 
 
-module.exports= webpackConfig
+module.exports = webpackConfig
