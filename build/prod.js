@@ -4,6 +4,7 @@ const MiniCssExtractPlugin=require("mini-css-extract-plugin");
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 const {CleanWebpackPlugin}=require("clean-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const { PATHS,hash } = require("./config.js");
 
@@ -15,7 +16,7 @@ function webpackConfig(env,argv){
             path:PATHS.output,
             chunkFilename:`${PATHS.out_js}[name].[${hash}].js`,
             filename:`${PATHS.out_js}[name].[${hash}].js`,
-            //publicPath:"./"
+            publicPath:"/"
         },
         optimization:{
             minimizer:[
@@ -69,6 +70,11 @@ function webpackConfig(env,argv){
         ]
 
     }
+
+    if(env.analyzer){
+        prodConf.plugins.push(new BundleAnalyzerPlugin())
+    }
+    
     return merge(baseConf(env,argv),prodConf);
 }
 

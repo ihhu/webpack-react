@@ -44,6 +44,8 @@ function getEntrys(pages){
             commonCssLink:defaultHtmlOptions.commonCssLink,
             favicon:defaultHtmlOptions.favicon,
             minify:defaultHtmlOptions.minify,
+            description:page.description||"",
+            keywords:page.keywords||""
             
         }
         HTMLPlugins.push(new HtmlWebpackPlugin(options))
@@ -64,6 +66,13 @@ function baseConf(env,argv){
                 maxInitialRequests:Infinity,
                 automaticNameDelimiter: '.',
                 cacheGroups:{
+                    react: {  
+                        name: "react.common",
+                        chunks: "initial",
+                        test: /(react-router)|(react[\\/]cjs[\\/]react)|(react-dom[\\/]cjs[\\/]react-dom)/,
+                        minSize:0,  
+                        priority:2
+                    },
                     common: {  //公共模块 
                         name: "common",
                         chunks: "initial",  //入口处开始提取代码
