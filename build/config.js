@@ -45,6 +45,7 @@ const config = {
         compress:true,
         historyApiFallback:true,
         disableHostCheck:true,
+        publicPath:"/",
         // host:"0.0.0.0",
         proxy:[
             {

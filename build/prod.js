@@ -21,8 +21,10 @@ function webpackConfig(env,argv){
         optimization:{
             minimizer:[
                 new TerserPlugin({
-                    cache:true,
-                    parallel:true, // 开启多线程压缩
+                    // 启用/禁用提取注释 默认值：true
+                    extractComments:false,
+                    // 开启多线程压缩
+                    parallel:true, 
                     terserOptions:{
                         compress:{
                             drop_console:true,

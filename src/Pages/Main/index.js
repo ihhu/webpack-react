@@ -4,7 +4,6 @@ import {render} from "react-dom";
 import "@Style/Scss/Style.scss";
 
 import App from "./App.js";
-console.log("env:::",env)
 console.log("IS_DEV:::",IS_DEV)
 console.log("app start 1");
 // console.log("app",App);

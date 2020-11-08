@@ -61,6 +61,7 @@ function baseConf(env,argv){
         entry:{
             ...entrys
         },
+        target:"web",
         optimization: {
             splitChunks: {
                 maxInitialRequests:Infinity,
@@ -80,7 +81,7 @@ function baseConf(env,argv){
                         minChunks:3,    //代码复 2 次以上的抽离
                         priority:0
                     },
-                    vendors: {
+                    defaultVendors: {
                         test: /[\\/]node_modules[\\/]/,
                         chunks: 'all',
                         priority: -10
@@ -214,7 +215,6 @@ function baseConf(env,argv){
         },
         plugins:[
             ...HTMLPlugins,
-            new webpack.HashedModuleIdsPlugin(),     //hash id 缓存
             new webpack.DefinePlugin({
                 env: JSON.stringify(process.env)
             })
